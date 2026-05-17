@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this replication repository, cite both this repository and the original paper."
+title: "Primiceri (2005) TVP-SVAR replication"
+authors:
+  - family-names: "Fernandes"
+    given-names: "Otavio"
+year: 2026
+license: "MIT"
+preferred-citation:
+  type: article
+  title: "Time Varying Structural Vector Autoregressions and Monetary Policy"
+  authors:
+    - family-names: "Primiceri"
+      given-names: "Giorgio E."
+  journal: "The Review of Economic Studies"
+  volume: 72
+  issue: 3
+  start: 821
+  end: 852
+  year: 2005
+  doi: "10.1111/j.1467-937X.2005.00353.x"
+
