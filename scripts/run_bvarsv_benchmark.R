@@ -84,14 +84,15 @@ fit <- bvar.sv.tvp(
   nburn = args$nburn,
   thinfac = args$thinfac,
   itprint = args$itprint,
-  save.parameters = FALSE
+  save.parameters = TRUE
 )
 
-time_index <- as.numeric(time(usmacro))
-dates <- quarter_label(time_index)
 series_names <- colnames(usmacro)
 
 h_mean <- fit$H.postmean
+time_index_full <- as.numeric(time(usmacro))
+time_index <- tail(time_index_full, dim(h_mean)[3])
+dates <- quarter_label(time_index)
 volatility <- t(vapply(
   seq_len(dim(h_mean)[3]),
   function(t) sqrt(diag(h_mean[, , t])),
