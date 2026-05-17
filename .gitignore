@@ -10,6 +10,7 @@ references/*.pdf
 outputs/*.npz
 outputs/*.pkl
 outputs/*.log
+outputs/*.rds
 outputs/*.csv
 outputs/*.md
 outputs/figures/*.png

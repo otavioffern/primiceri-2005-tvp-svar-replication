@@ -36,6 +36,22 @@ For a closer paper-style run, increase the sampler length:
 python scripts\run_replication.py --iterations 10000 --burn 2000 --seed 123
 ```
 
+## R Benchmark
+
+The fastest benchmark path uses Fabian Krueger's R/C++ package `bvarsv`, which implements the Primiceri model and includes the `usmacro` dataset used in common replications.
+
+```powershell
+Rscript scripts\run_bvarsv_benchmark.R --install --nrep=10000 --nburn=2000 --thinfac=10
+```
+
+For a smoke test:
+
+```powershell
+Rscript scripts\run_bvarsv_benchmark.R --install --nrep=200 --nburn=100 --thinfac=10
+```
+
+The script writes `outputs/r_bvarsv_volatility_summary.csv`, `outputs/r_bvarsv_volatility_paths.csv`, and `outputs/figures/r_bvarsv_volatilities.png`.
+
 ## Outputs
 
 Generated outputs are written to:
@@ -46,6 +62,8 @@ Generated outputs are written to:
 - `outputs/figures/03_policy_shock_irfs.png`
 - `outputs/posterior_volatility_summary.csv`
 - `outputs/replication_summary.md`
+- `outputs/r_bvarsv_volatility_summary.csv`
+- `outputs/r_bvarsv_volatility_paths.csv`
 
 The generated figures are meant to be transparent replication artifacts, not exact scans of the paper figures. Exact numerical equality is not expected because the original data source is proprietary and the default run is shorter than the paper's 10,000-iteration benchmark.
 

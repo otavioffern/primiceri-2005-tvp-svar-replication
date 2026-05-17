@@ -32,3 +32,8 @@ The original paper uses S&P DRI data. This repository defaults to public FRED pr
 
 For closer comparability with common public replications, compare against the `usmacro` dataset in the R package `bvarsv`.
 
+## Performance Strategy
+
+The Python implementation prioritizes readability and inspection of the sampler. The recommended performance benchmark is `scripts/run_bvarsv_benchmark.R`, which delegates estimation to the compiled R/C++ package `bvarsv`.
+
+Future Python optimization should focus on the forward-filtering backward-sampling loops, Cholesky-based linear solves instead of pseudo-inverses, and parallel independent chains. A Julia or C++ core would be useful only after profiling shows the Python implementation is the limiting step for a specific workflow.
