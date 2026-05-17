@@ -113,7 +113,7 @@ write.csv(
 )
 
 periods <- list(
-  pre_volcker_1963Q1_1979Q2 = c(1963.00, 1979.25),
+  pre_volcker_1963Q3_1979Q2 = c(1963.50, 1979.25),
   volcker_transition_1979Q3_1983Q4 = c(1979.50, 1983.75),
   post_1984Q1_2001Q3 = c(1984.00, 2001.50)
 )

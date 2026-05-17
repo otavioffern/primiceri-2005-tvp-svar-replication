@@ -4,6 +4,8 @@ This repository contains a reproducible replication attempt for Giorgio Primicer
 
 It is written as a public-facing research repository: source code, reproducible data construction, generated figures, citation metadata, and Colab instructions are included. The article PDF is not vendored; see [REFERENCES.md](REFERENCES.md) for links and copyright notes.
 
+Start with the R/C++ benchmark if the goal is replication credibility. Use the Python code if the goal is to inspect the sampler mechanics step by step.
+
 The code implements the model described in Sections 2 and 3.1 of the paper:
 
 - a three-variable quarterly VAR with time-varying lag coefficients;
@@ -57,6 +59,8 @@ Rscript scripts\run_bvarsv_benchmark.R --install --nrep=200 --nburn=100 --thinfa
 ```
 
 The script writes `outputs/r_bvarsv_volatility_summary.csv`, `outputs/r_bvarsv_volatility_paths.csv`, and `outputs/figures/r_bvarsv_volatilities.png`.
+
+The current benchmark result is summarized in [reports/benchmark_results.md](reports/benchmark_results.md).
 
 ## Outputs
 

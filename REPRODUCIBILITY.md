@@ -36,4 +36,6 @@ For closer comparability with common public replications, compare against the `u
 
 The Python implementation prioritizes readability and inspection of the sampler. The recommended performance benchmark is `scripts/run_bvarsv_benchmark.R`, which delegates estimation to the compiled R/C++ package `bvarsv`.
 
+On this Windows machine, a benchmark run with `nrep=10000`, `nburn=2000`, and `thinfac=10` completed in 142.1 seconds through the local R/C++ path. That is fast enough that Google Colab is better treated as a portable demo environment than as the default speed strategy for this three-variable model.
+
 Future Python optimization should focus on the forward-filtering backward-sampling loops, Cholesky-based linear solves instead of pseudo-inverses, and parallel independent chains. A Julia or C++ core would be useful only after profiling shows the Python implementation is the limiting step for a specific workflow.
