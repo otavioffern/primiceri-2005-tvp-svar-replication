@@ -44,6 +44,12 @@ The fastest benchmark path uses Fabian Krueger's R/C++ package `bvarsv`, which i
 Rscript scripts\run_bvarsv_benchmark.R --install --nrep=10000 --nburn=2000 --thinfac=10
 ```
 
+On this Windows workspace, R was installed locally under `../tools/R-4.6.0`. The helper wrapper sets the local R library path automatically:
+
+```powershell
+.\scripts\run_bvarsv_benchmark.ps1 -NRep 10000 -NBurn 2000 -ThinFac 10
+```
+
 For a smoke test:
 
 ```powershell
